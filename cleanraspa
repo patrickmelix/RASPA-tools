@@ -1,0 +1,15 @@
+#! /bin/bash
+set -e
+list=("Movies" "Output" "Restart" "VTK" "EnergyHistograms" "NumberOfMoleculesHistograms" "out.log" "pid.txt")
+for f in "${list[@]}"
+do
+   if [ -d "${f}" ]; then
+      echo -n " ${f} "
+      rm -r ${f}
+   elif [ -f "${f}" ]; then
+      echo -n " ${f} "
+      rm ${f}
+   fi
+done
+echo ""
+exit 0
