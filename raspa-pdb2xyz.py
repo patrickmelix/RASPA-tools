@@ -25,7 +25,7 @@ def main(inFile,outFile):
                 atoms[-1].append(Atom(line[2], line[4:7]))
 
 
-    io.write(atoms, outFile, format='xyz')
+    io.write(outFile, atoms, format='xyz')
 
 
 if __name__ == "__main__":
